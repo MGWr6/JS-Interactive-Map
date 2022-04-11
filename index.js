@@ -47,21 +47,20 @@ window.onload = async () => {
 
 
 async function getFoursquare(business) {
-  const options = {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      Authorization: 'fsq3KzqUq4JCPJjFCK4NslduhZJm11FhOCyB5mq7zgGzhfc='
-    }
-  }
-
+	const options = {
+		method: 'GET',
+		headers: {
+		Accept: 'application/json',
+		Authorization: 'fsq3bsXrFeZJFBRwLtfDvAYCZdYnAKHcgVDGX3gV49pNYoY='
+		}
+	}
 	let lat = myMap.coordinates[0]
 	let lon = myMap.coordinates[1]
 	let limit = 5
 	let response = await fetch(`https://api.foursquare.com/v3/places/search?query=${business}&ll=${lat}%2C${lon}&limit=${limit}`, options)
 	let data = await response.text()
-	let parseData = JSON.parse(data)
-	let businesses = parseData.results
+	let parsedData = JSON.parse(data)
+	let businesses = parsedData.results
 	return businesses
 };
 
