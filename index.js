@@ -50,7 +50,7 @@ async function getFoursquare(business) {
 	const options = {
 		method: 'GET',
 		headers: {
-		Accept: 'application/json',
+		Accept: 'application./json',
 		Authorization: 'fsq3bsXrFeZJFBRwLtfDvAYCZdYnAKHcgVDGX3gV49pNYoY='
 		}
 	}
